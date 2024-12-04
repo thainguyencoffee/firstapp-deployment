@@ -18,7 +18,7 @@ configMapGenerator:
 images:
 - name: music-service
   newName: ghcr.io/thainguyencoffee/music-service
-  newTag: 76e2125cea81d8f08c4ee838ee616fb036e76cb3
+  newTag: 17d8265d2c5e056a378836a1ec9b7000450fbde0
 
 replicas:
 - count: 2
