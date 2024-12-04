@@ -1,5 +1,5 @@
-firstapp:
-  greet: "Hello, World! (k8s prod)"
+music-service:
+  greeting: "Hello, World! (music k8s prod)"
 spring:
   config:
     import: configtree:/workspace/secrets/*/
