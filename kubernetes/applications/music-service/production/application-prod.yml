@@ -1,0 +1,5 @@
+firstapp:
+  greet: "Hello, World! (k8s prod)"
+spring:
+  config:
+    import: configtree:/workspace/secrets/*/

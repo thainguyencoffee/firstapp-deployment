@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: music-service
+spec:
+  template:
+    spec:
+      containers:
+        - name: music-service
+          volumeMounts:
+            - mountPath: /workspace/secrets/postgres
+              name: postgres-credentials-volume
+      volumes:
+        - name: postgres-credentials-volume
+          secret:
+            secretName: postgres-music-credentials
