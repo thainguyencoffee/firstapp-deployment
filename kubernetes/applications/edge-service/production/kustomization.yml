@@ -2,24 +2,24 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/thainguyencoffee/edge-service/k8s?ref=main
+- github.com/thainguyencoffee/edge-service/k8s?ref=main
 
 patches:
-  - path: patch-env.yml
-  - path: path-ingress.yml
-  - path: patch-resources.yml
+- path: patch-env.yml
+- path: path-ingress.yml
+- path: patch-resources.yml
 
 configMapGenerator:
-  - behavior: merge
-    files:
-      - application-prod.yml
-    name: edge-config
+- behavior: merge
+  files:
+  - application-prod.yml
+  name: edge-config
 
 images:
-  - name: edge-service
-    newName: ghcr.io/thainguyencoffee/edge-service
-    newTag: latest
+- name: edge-service
+  newName: ghcr.io/thainguyencoffee/edge-service
+  newTag: 2e7666af6232e6efa43630bc1430d624700654f0
 
 replicas:
-  - count: 1
-    name: edge-service
+- count: 1
+  name: edge-service
